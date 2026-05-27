@@ -34,34 +34,34 @@ An agentic, multilingual AI chatbot that helps Indian women know their legal rig
 
 ## Project Structure
 
-sakhibot/
-├── backend/
-│   ├── agents/
-│   │   ├── legal_retriever.py   # Agent 1 — RAG pipeline
-│   │   ├── doc_drafter.py       # Agent 2 — FIR/complaint generator
-│   │   ├── resource_locator.py  # Agent 3 — shelter finder
-│   │   └── safety_planner.py    # Agent 4 — personalised plan
-│   ├── data/
-│   │   └── resources.json       # OSCs, shelters, helplines
-│   ├── docs/                    # Legal PDFs (knowledge base)
-│   ├── templates/               # FIR and complaint templates
-│   ├── config.py
-│   ├── main.py                  # FastAPI app
-│   ├── ingest.py                # PDF → ChromaDB pipeline
-│   ├── orchestrator.py          # LangGraph wiring
-│   └── translate.py             # Language layer
-└── frontend/
-└── src/
-├── components/
-│   ├── ChatWindow.jsx
-│   ├── MessageBubble.jsx
-│   ├── SourceCard.jsx
-│   ├── VoiceButton.jsx
-│   ├── LanguageSelector.jsx
-│   ├── InputBar.jsx
-│   └── EmergencyBanner.jsx
-├── App.jsx
-└── api.js
+    sakhibot/
+    ├── backend/
+    │   ├── agents/
+    │   │   ├── legal_retriever.py   
+    │   │   ├── doc_drafter.py       
+    │   │   ├── resource_locator.py  
+    │   │   └── safety_planner.py    
+    │   ├── data/
+    │   │   └── resources.json       
+    │   ├── docs/                    
+    │   ├── templates/               
+    │   ├── config.py
+    │   ├── main.py                  
+    │   ├── ingest.py                
+    │   ├── orchestrator.py          
+    │   └── translate.py             
+    └── frontend/
+        └── src/
+            ├── components/
+            │   ├── ChatWindow.jsx
+            │   ├── MessageBubble.jsx
+            │   ├── SourceCard.jsx
+            │   ├── VoiceButton.jsx
+            │   ├── LanguageSelector.jsx
+            │   ├── InputBar.jsx
+            │   └── EmergencyBanner.jsx
+            ├── App.jsx
+            └── api.js
 
 ---
 
