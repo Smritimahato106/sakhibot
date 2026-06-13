@@ -9,8 +9,8 @@ export default function MessageBubble({ msg, history }) {
 
   if (isUser) {
     return (
-      <div className="flex justify-end px-4">
-        <div className="max-w-[80%] bg-emerald-600 text-white rounded-2xl
+      <div className="mx-auto flex w-full max-w-3xl justify-end px-4 sm:px-6">
+        <div className="max-w-[86%] sm:max-w-[72%] bg-emerald-600 text-white rounded-2xl
                         rounded-tr-sm px-4 py-2.5 text-sm leading-relaxed
                         shadow-sm">
           {msg.content}
@@ -20,7 +20,8 @@ export default function MessageBubble({ msg, history }) {
   }
 
   return (
-    <div className="flex items-start gap-2.5 px-4">
+    <div className="mx-auto flex w-full max-w-3xl items-start gap-2.5
+                    px-4 sm:px-6">
       {/* avatar */}
       <div className="w-7 h-7 rounded-full bg-emerald-100 flex items-center
                       justify-center text-emerald-700 text-xs font-bold
@@ -28,7 +29,7 @@ export default function MessageBubble({ msg, history }) {
         S
       </div>
 
-      <div className="flex-1 min-w-0 max-w-[88%]">
+      <div className="flex-1 min-w-0 max-w-[92%] sm:max-w-[82%]">
         {/* main bubble */}
         <div className={`rounded-2xl rounded-tl-sm px-4 py-3 text-sm
                         leading-relaxed shadow-sm
@@ -66,7 +67,7 @@ export default function MessageBubble({ msg, history }) {
         )}
 
         {/* bottom actions */}
-        <div className="flex items-center gap-3 mt-2 px-1">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2 px-1">
           {/* TTS button */}
           <TTSButton text={msg.content} lang={msg.detectedLang} />
 
@@ -78,7 +79,7 @@ export default function MessageBubble({ msg, history }) {
 
           {/* agent tags */}
           {msg.activatedAgents?.length > 0 && (
-            <div className="flex gap-1 ml-auto">
+            <div className="ml-auto flex flex-wrap justify-end gap-1">
               {msg.activatedAgents
                 .filter(a => a !== 'emergency')
                 .map(a => (
