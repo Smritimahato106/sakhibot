@@ -233,66 +233,59 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white lg:bg-emerald-50/40">
       {/* header */}
-      <header
-        className="border-b border-emerald-100/80 bg-white/95 sticky top-0 z-10
-                   backdrop-blur"
+<header className="border-b border-emerald-100/80 bg-white/95 sticky top-0 z-10 backdrop-blur">
+  <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+    <div className="flex min-w-0 items-center gap-2.5">
+      <button
+        onClick={() => setScreen('landing')}
+        className="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-sm shrink-0"
+        title="SakhiBot home"
       >
-        <div
-          className="mx-auto flex w-full max-w-7xl items-center justify-between
-                     gap-3 px-4 py-3 sm:px-6 lg:px-8"
-        >
-          <div className="flex min-w-0 items-center gap-2.5">
-            <button
-              onClick={() => setScreen('landing')}
-              className="w-9 h-9 bg-emerald-600 rounded-full flex items-center
-                         justify-center text-white text-sm font-bold shadow-sm
-                         shrink-0"
-            >
-              S
-            </button>
+        S
+      </button>
 
-            <div>
-              <h1 className="text-sm font-semibold text-gray-900 leading-none">
-                SakhiBot
-              </h1>
+      <div>
+        <h1 className="text-sm font-semibold text-gray-900 leading-none">
+          SakhiBot
+        </h1>
 
-              <p className="text-[10px] text-gray-400 leading-none mt-0.5">
-                Women's legal rights assistant
-              </p>
-            </div>
-          </div>
+        <p className="text-[10px] text-gray-400 leading-none mt-0.5">
+          Women's legal rights assistant
+        </p>
+      </div>
+    </div>
 
-          <div className="flex shrink-0 items-center gap-2">
-            <LanguageSelector value={lang} onChange={setLang} />
+    <div className="flex shrink-0 items-center gap-2">
+      <LanguageSelector value={lang} onChange={setLang} />
 
-            <button
-              type="button"
-              onClick={handleLogout}
-              className="rounded-xl border border-gray-200 px-3 py-2 text-xs
-                         font-semibold text-gray-600 hover:bg-gray-50"
-            >
-              Logout
-            </button>
+      <button
+        type="button"
+        onClick={handleLogout}
+        className="rounded-xl border border-gray-200 px-3 py-2 text-xs font-semibold text-gray-600 hover:bg-gray-50"
+      >
+        Logout
+      </button>
 
             {screen === 'chat' && (
               <button
                 onClick={() => setScreen('landing')}
                 className="text-gray-400 hover:text-gray-600 p-1"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2
-                       2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0
-                       011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  />
+title="Home"
+>
+  <svg
+    className="w-5 h-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2
+         2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0
+         011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+    />
                 </svg>
               </button>
             )}
@@ -310,11 +303,11 @@ export default function App() {
           onStart={() => setScreen('chat')}
         />
       ) : (
-        <main
-          className="mx-auto flex w-full max-w-4xl flex-1 flex-col bg-white
-                     shadow-sm lg:my-6 lg:min-h-[calc(100vh-6rem)]
-                     lg:rounded-3xl lg:border lg:border-emerald-100"
-        >
+<main
+  className="mx-auto flex w-full max-w-4xl flex-1 flex-col bg-white
+             shadow-sm lg:my-6 lg:min-h-[calc(100vh-6rem)]
+             lg:rounded-3xl lg:border lg:border-emerald-100"
+>
           <ChatWindow
             messages={messages}
             loading={loading}
@@ -333,4 +326,4 @@ export default function App() {
     </div>
   )
 }
- 
+
