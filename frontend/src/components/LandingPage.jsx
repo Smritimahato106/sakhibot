@@ -1,3 +1,4 @@
+//updated landing page
 const FEATURES = [
   {
     icon: 'LAW',
